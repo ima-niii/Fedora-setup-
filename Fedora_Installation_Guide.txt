@@ -1,0 +1,47 @@
+FEDORA INSTALLATION GUIDE
+
+1. ENABLE VIRTUALIZATION ON THE HOST MACHINE
+- Restarted the laptop and entered the BIOS/UEFI setup (by pressing F2 or DEL during startup).
+- Located the “Virtualization Technology” or “Intel VT-x / AMD-V” option.
+- Enabled it to allow the system to run virtual machines.
+- Saved changes and exited BIOS.
+- Verified that virtualization was enabled by opening Task Manager → Performance → CPU (Virtualization: Enabled).
+
+2. DOWNLOAD FEDORA ISO
+- Visited the official Fedora website (https://getfedora.org)
+- Downloaded the Fedora Workstation ISO file.
+
+3. CREATE A NEW VIRTUAL MACHINE
+- Opened VMware Workstation and selected “Create a New Virtual Machine.”
+- Chose “Typical” configuration.
+- Selected the downloaded Fedora ISO as the installation media.
+- Set the virtual machine name to “Fedora Workstation.”
+- Allocated 4 GB of RAM and 20 GB virtual disk space.
+- Finished the setup and powered on the VM.
+
+4. INSTALL FEDORA
+
+- Selected “Install Fedora Workstation” on the boot menu.
+- Chose English as the language.
+- Selected the installation destination and confirmed automatic partitioning.
+- Set up root password and user account (Imani Bashir).
+- Proceeded with installation.
+- After installation completed, rebooted the VM.
+
+5. INSTALL AND SET UP GUI
+- Opened Terminal after login to the Fedora system.
+- Installed the XFCE desktop environment:
+  $ sudo dnf install @xfce-desktop-environment -y
+- Set the graphical interface as default:
+  $ sudo systemctl set-default graphical.target
+- Rebooted the system to load the GUI by default.
+- Verified that the system boots into the XFCE graphical interface.
+
+6. FIRST BOOT AND LOGIN
+- Logged in with the created user account.
+- Verified desktop environment loaded correctly.
+- Checked system information under “Settings → About.”
+- Confirmed internet connectivity within VMware.
+
+Added Fedora Installation Guide with GUI setup
+
