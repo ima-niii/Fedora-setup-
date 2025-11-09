@@ -1,16 +1,14 @@
-# Fedora Installation Guide
+# Fedora Networking Guides
 
-This repository documents the process of installing Fedora Linux on VMware Workstation as part of my coursework. It includes enabling virtualization, installing the OS, and setting up the graphical interface (GUI).
+This repository contains practical Fedora Linux guides for  installation, GUI setup, firewall configuration, and DHCP server setup.
 
-## Contents
-- **Fedora_Installation_Guide.txt** — Detailed step-by-step instructions for installing Fedora, enabling virtualization, and installing the XFCE desktop environment as the default GUI.
+## Guides
+- **Fedora_Installation_Guide.txt** — Install Fedora and set up XFCE as the default GUI.
+- **Fedora_Firewall_Guide.txt** — Configure firewall to allow SSH, HTTP, HTTPS, and DHCP services.
+- **Fedora_DHCP_Setup_Guide.txt** — Configure and monitor a DHCP server (ensure firewall is configured first).
 
-## Highlights
-- Installed Fedora Workstation on a virtual machine.
-  
-
-## Purpose
-The purpose of this repository is to demonstrate the practical process of installing and setting up Fedora Linux in a virtualized environment as part of my networking coursework.
+## Notes
+- Follow guides in order: Installation → Firewall → DHCP.  
 
 ## Author
 Imani Bashir
