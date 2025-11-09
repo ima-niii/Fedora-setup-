@@ -1,0 +1,42 @@
+ Firewall Configuration on Fedora (FedoraServer Zone)
+
+1. Check if Firewalld is running
+sudo systemctl status firewalld
+
+
+2.Check active zone
+sudo firewall-cmd --get-active-zones
+
+
+3. List current firewall settings
+sudo firewall-cmd --zone=FedoraServer --list-all
+
+Default services often include:
+services: cockpit dhcpv6-client ssh
+
+
+4. Add HTTP and HTTPS services
+sudo firewall-cmd --zone=FedoraServer --add-service=http --permanent
+sudo firewall-cmd --zone=FedoraServer --add-service=https --permanent
+
+
+5. Reload firewall to apply changes
+sudo firewall-cmd --reload
+
+
+6. Verify the changes
+sudo firewall-cmd --zone=FedoraServer --list-all
+
+
+You should now see:
+services: cockpit dhcpv6-client ssh http https
+
+which means the firewall now allows:
+
+SSH  ..... Secure remote login
+HTTP  ..... Web traffic
+HTTPS  ..... Secure web traffic
+ defaults (cockpit, dhcpv6-client)
+Added Fedora firewall setup guide
+
+
